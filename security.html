@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walletme — Secure Your Wallet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="security-page">
+    <div class="page-shell security-shell">
+      <!-- <header class="topbar compact-topbar">
+        <div class="brand" aria-label="Walletme home">
+          <div class="brand-mark">
+            <span class="shield-shape"></span>
+          </div>
+          <div class="brand-word">Walletme</div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#">Markets</a>
+          <a href="#">Wallet</a>
+          <a href="#">Features</a>
+          <a href="#">Build</a>
+          <a href="#">Support</a>
+          <a href="#">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Toggle theme">◐</button>
+          <button class="language-btn" aria-label="Language selector">
+            <span class="globe">◌</span>
+            <span>Language</span>
+          </button>
+          <button class="download-btn">Log in</button>
+        </div>
+      </header> -->
+
+      <main class="security-layout">
+        <aside class="security-sidebar">
+          <div class="mini-brand">
+            <img src="unnamed.png" class="brand-img" alt="Trust Wallet" />
+            <div class="brand-word small-word">Trust Wallet</div>
+          </div>
+
+          <div class="security-copy">
+            <div class="step-label">Step 1 of 3</div>
+            <h2>Secure your wallet</h2>
+          </div>
+
+          <div class="security-visual" aria-hidden="true">
+            <div class="shield-illustration large-shield">
+              <div class="shield-top"></div>
+              <div class="scanner-bar"></div>
+              <div class="scan-lines"></div>
+              <div class="fingerprint"></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="security-panel">
+          <button class="back-link" onclick="window.location.href='index.html'">&lt; Back</button>
+
+          <h3>Verify Password</h3>
+
+          <div id="optionList" class="option-list">
+            <!-- <button class="option selected" type="button" data-option="windows">
+              <span class="icon-wrap">
+                <span class="icon-qr"></span>
+              </span>
+              <span class="option-name">Windows Hello</span>
+              <span class="badge">Recommended</span>
+              <span class="chevron">›</span>
+            </button> -->
+
+            <button class="option" type="button" data-option="password">
+              <span class="icon-wrap">
+                <span class="icon-lock"></span>
+              </span>
+              <span class="option-name">Password</span>
+              <span class="chevron">›</span>
+            </button>
+          </div>
+
+          <form id="passwordForm" class="password-form hidden" novalidate>
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="Create a password" required />
+            </div>
+
+            <div class="form-row">
+              <label for="confirmPassword">Confirm password</label>
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required />
+            </div>
+
+            <button type="submit" class="create-btn">Create</button>
+            <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

